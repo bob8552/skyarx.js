@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: "memberinfo",
   aliases: ["userinfo", "whois", "minfo"],
-  category: "misc",
+  category: "utility",
   description: "Gives information of a member",
   usage: "[command | alias]",
   run: async (bot, message, args) => {

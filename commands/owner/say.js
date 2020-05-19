@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 module.exports = {
     name: "say",
     aliases: ["repeat"],
-    category: "moderation",
+    category: "owner",
     description: "Repeat arguments passed in",
     usage: "[command | alias]",
     run: async (bot, message, args) => {

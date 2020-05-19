@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 module.exports = {
     name: "eval",
     aliases: ["evaX"],
-    category: "moderation",
+    category: "owner",
     description: "Owner only, run code",
     usage: "[command | alias]",
     run: async (bot, message, args) => {

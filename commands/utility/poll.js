@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: "poll",
   aliases: ["vote"],
-  category: "info",
+  category: "utility",
   description: "Vote for whatever you want !",
   usage: "[command | alias]",
   run: async (bot, message, args) => {
