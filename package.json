@@ -1,7 +1,7 @@
 {
   "name": "skyarx.js",
   "version": "1.0.0",
-  "description": "A basic moderation bot with extra features",
+  "description": "A bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
