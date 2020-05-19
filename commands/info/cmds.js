@@ -8,26 +8,36 @@ module.exports = {
   run: async (bot, message, args) => {
     const embedcmds = new Discord.MessageEmbed()
       .setColor("RANDOM")
-      .setTitle("Commands V1.0.0")
+      .setTitle("**Commands V1.1.0**")
       .addFields(
         {
-          name: "**Misc**",
-          value:"**`>botinfo, >help, >test, >ping, >serverinfo, >userinfo, >avatar, >bugreport, >say (Owner only), >uptime`**"
+          name: "**Info commands**",
+          value:"**`>botinfo, >help, >test, >ping, >bugreport, >uptime, >cmds`**"
         },
 
         {
-          name: "**Fun**",
+          name: "**Fun commands**",
           value: "**`>8ball, >meme, >die`**"
+        },
+        
+        {
+          name: "**Utility commands**",
+          value: "**`>avatar, >memberinfo, >serverinfo, >verify, >poll, >slowmode`**"
         },
 
         {
           name: "**Moderator commands**",
-          value: "**`>ban, >mute, >unmute, >warn, >purge, >poll (requires 'poll' or 'announcements' channel), >verify (not necessarily moderator only)`**"
+          value: "**`>ban, >kick, >mute, >unmute, >warn, >purge`**"
+        },
+        
+        {
+          name: "**Owner only commands**",
+          value: "**`>leave, >say`**"
         },
 
         {
-          name: "**1.0.0 Changelog**",
-          value: "**`Perfected logging embeds. After 1.0.0 release, updates will become less frequent. Updates will not cease, though.`**"
+          name: "**1.1.0 Changelog**",
+          value: "**`Slowmode command added, more command catergories and reorganised the code into other folders.`**"
         }
       )
       .setTimestamp()

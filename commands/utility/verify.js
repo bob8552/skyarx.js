@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 module.exports = {
     name: "verify",
     aliases: ["v"],
-    category: "moderation",
+    category: "utility",
     description: "Gives the member a verified/member role !",
     usage: "[command | alias]",
     run: async (bot, message, args) => {

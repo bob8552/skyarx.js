@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: "memberinfo",
   aliases: ["userinfo", "whois", "minfo"],
-  category: "misc",
+  category: "utility",
   description: "Gives information of a member",
   usage: "[command | alias]",
   run: async (bot, message, args) => {
@@ -30,7 +30,7 @@ module.exports = {
         { name: "Account ID: ", value: `\`${member.user.id}\`` },
         { name: "Account discriminator: ", value: `\`${member.user.tag}\`` },
         { name: "Account Username: ", value: `\`${member.user.username}\`` },
-        { name: "Account created at", value: `\`${message.author.createdAt}\``}
+        { name: "Account created at", value: `\`${member.user.createdAt}\``}
       )
 
       .setTimestamp();
