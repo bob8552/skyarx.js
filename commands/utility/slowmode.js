@@ -29,6 +29,7 @@ module.exports={
             { name: 'Slowmode time', value: `\`${args[0]}\``, inline: true },
             { name: 'Reason', value: `\`${reason}\``, inline: true },
             { name: 'Channel', value: `\`${message.channel.name}\``, inline: true },
+          { name: 'Channel ID', value: `\`${message.channel.id}\``, inline: true },
           )
 
         message.channel.send(`**Set the slowmode of this channel to \`${args[0]}\` with the reason: \`${reason}\`**`).then(logchannel.send(embedddette));

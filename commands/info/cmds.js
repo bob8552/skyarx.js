@@ -8,20 +8,20 @@ module.exports = {
   run: async (bot, message, args) => {
     const embedcmds = new Discord.MessageEmbed()
       .setColor("RANDOM")
-      .setTitle("Commands V1.1.0")
+      .setTitle("**Commands V1.1.0**")
       .addFields(
         {
-          name: "**Info**",
+          name: "**Info commands**",
           value:"**`>botinfo, >help, >test, >ping, >bugreport, >uptime, >cmds`**"
         },
 
         {
-          name: "**Fun**",
+          name: "**Fun commands**",
           value: "**`>8ball, >meme, >die`**"
         },
         
         {
-          name: "**Utility**",
+          name: "**Utility commands**",
           value: "**`>avatar, >memberinfo, >serverinfo, >verify, >poll, >slowmode`**"
         },
 
@@ -31,13 +31,13 @@ module.exports = {
         },
         
         {
-          name: "**Owner**",
+          name: "**Owner only commands**",
           value: "**`>leave, >say`**"
         },
 
         {
           name: "**1.1.0 Changelog**",
-          value: "**`Slowmode command added, more command catergories and organised the code into more folders.`**"
+          value: "**`Slowmode command added, more command catergories and reorganised the code into other folders.`**"
         }
       )
       .setTimestamp()

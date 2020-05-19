@@ -30,7 +30,7 @@ module.exports = {
         { name: "Account ID: ", value: `\`${member.user.id}\`` },
         { name: "Account discriminator: ", value: `\`${member.user.tag}\`` },
         { name: "Account Username: ", value: `\`${member.user.username}\`` },
-        { name: "Account created at", value: `\`${message.author.createdAt}\``}
+        { name: "Account created at", value: `\`${member.user.createdAt}\``}
       )
 
       .setTimestamp();
