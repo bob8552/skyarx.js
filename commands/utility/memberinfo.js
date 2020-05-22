@@ -16,21 +16,21 @@ module.exports = {
 
     const embedd = new Discord.MessageEmbed()
       .setFooter(`${message.guild.name}`)
-      .setThumbnail(`${member.user.avatarURL()}`)
+      .setThumbnail(member.user.avatarURL())
       .setColor("RANDOM")
       .setTitle("User Information")
 
       .addFields(
-        { name: "Nickname: ", value: `\`${member.displayName}\`` },
-        { name: "Joined at: ", value: `\`${joined}\`` },
-        { name: "Guild: ", value: `\`${message.channel.guild}\`` }
+        { name: "Nickname: ", value: `> ${member.displayName}` },
+        { name: "Joined at: ", value: `> ${joined}` },
+        { name: "Guild: ", value: `> ${message.channel.guild}` }
       )
       .setDescription(`**Member:** ${member}`)
       .addFields(
-        { name: "Account ID: ", value: `\`${member.user.id}\`` },
-        { name: "Account discriminator: ", value: `\`${member.user.tag}\`` },
-        { name: "Account Username: ", value: `\`${member.user.username}\`` },
-        { name: "Account created at", value: `\`${member.user.createdAt}\``}
+        { name: "Account ID: ", value: `> ${member.user.id}` },
+        { name: "Account discriminator: ", value: `> ${member.user.tag}` },
+        { name: "Account Username: ", value: `> ${member.user.username}` },
+        { name: "Account created at", value: `> ${member.user.createdAt}`}
       )
 
       .setTimestamp();

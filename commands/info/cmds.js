@@ -8,7 +8,7 @@ module.exports = {
   run: async (bot, message, args) => {
     const embedcmds = new Discord.MessageEmbed()
       .setColor("RANDOM")
-      .setTitle("**Commands V1.2.0**")
+      .setTitle("**Commands V1.2.1**")
       .addFields(
         {
           name: "**Info commands**",
@@ -36,8 +36,8 @@ module.exports = {
         },
 
         {
-          name: "**1.2.0 Changelog**",
-          value: "**`New >channel command to create and delete channels.`**"
+          name: "**1.2.1 Changelog**",
+          value: "**`Flagging messages that may contain malicious stuff / words.`**"
         }
       )
       .setTimestamp()
