@@ -1,13 +1,13 @@
-var express = require('express');
+var express = require("express");
 var app = express();
 app.get("/", (request, response) => {
-    response.sendStatus(200)
+  response.sendStatus(200);
 });
 app.listen(process.env.PORT);
 
 const Discord = require("discord.js");
 const fs = require("fs");
-const bot = new Discord.Client({disableMentions: "everyone"});
+const bot = new Discord.Client({ disableMentions: "everyone" });
 const prefix = process.env.PREFIX;
 const token = process.env.TOKEN;
 
@@ -17,20 +17,24 @@ bot.aliases = new Discord.Collection();
 bot.categories = fs.readdirSync("./commands/");
 
 ["command"].forEach(handler => {
-    require(`./handlers/${handler}`)(bot);
+  require(`./handlers/${handler}`)(bot);
 });
 
-bot.on('ready', () => {
-    console.log(`${bot.user.tag} is now online.`)
-    bot.user.setActivity(">help | v1.2.0", {
-        type: "PLAYING",
-    });
+bot.on("ready", () => {
+  console.log(`${bot.user.tag} is now online.`);
+  bot.user.setActivity(">help | v1.2.0", {
+    type: "PLAYING"
+  });
 });
 
-bot.on('message', async message => {
-    message.member
-    message.author 
-    require('./events/message')(bot, message)
+bot.on("message", async message => {
+  message.member;
+  message.author;
+  require("./events/message")(bot, message);
+});
+
+bot.on("message", async message => {
+  require("./events/wordFilter")(bot, message);
 });
 
 bot.login(token);
