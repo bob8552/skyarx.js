@@ -25,7 +25,7 @@ bot.on("ready", () => {
   bot.user.setActivity(">help | v1.2.1", {
     type: "PLAYING"
   });
-});
+})
 
 bot.on("message", async message => {
   message.member;
