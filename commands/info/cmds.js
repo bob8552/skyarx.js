@@ -8,16 +8,16 @@ module.exports = {
   run: async (bot, message, args) => {
     const embedcmds = new Discord.MessageEmbed()
       .setColor("RANDOM")
-      .setTitle("**Commands V1.2.1**")
+      .setTitle("**Commands V1.3.0**")
       .addFields(
         {
           name: "**Info commands**",
-          value:"**`>botinfo, >help, >test, >ping, >bugreport, >uptime, >cmds`**"
+          value:"**`>botinfo, >help, >ping, >bugreport, >uptime, >cmds`**"
         },
 
         {
           name: "**Fun commands**",
-          value: "**`>8ball, >meme, >die`**"
+          value: "**`>8ball, >meme, >die, >textart`**"
         },
         
         {
@@ -36,8 +36,8 @@ module.exports = {
         },
 
         {
-          name: "**1.2.1 Changelog**",
-          value: "**`Flagging messages that may contain malicious stuff / words.`**"
+          name: "**1.3.0 Changelog**",
+          value: "**`Removed >test and added >textart (>ascii) comand`**"
         }
       )
       .setTimestamp()

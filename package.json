@@ -14,12 +14,13 @@
     "express": "^4.17.1",
     "imageapi.js": "^1.0.3",
     "int.engine": "^1.0.3",
-    "mongoose": "^5.9.15",
+    "mongoose": "^5.9.16",
     "ms": "^2.1.2",
     "node-fetch": "^2.6.0",
     "pm2": "^4.4.0",
     "yt-search": "^1.1.2",
-    "ytdl-core": "^2.1.4"
+    "ytdl-core": "^2.1.5",
+    "figlet": "^1.4.0"
   },
   "engines": {
     "node": "12.x"

@@ -22,7 +22,7 @@ bot.categories = fs.readdirSync("./commands/");
 
 bot.on("ready", () => {
   console.log(`${bot.user.tag} is now online.`);
-  bot.user.setActivity(">help | v1.2.1", {
+  bot.user.setActivity(">help | v1.3.0", {
     type: "PLAYING"
   });
 });

@@ -12,7 +12,7 @@ module.exports = {
         .setDescription('A bot made by skyarxbuilder (bob8552) for few servers.')
         .addFields(
             { name: 'Help & Extra Info', value: 'https://discord.gg/tcxbt5p' },
-            { name: 'Version', value: '1.2.1' }
+            { name: 'Version', value: '1.3.0' }
         )
         .setTimestamp()
         .setFooter(`${message.author.username}`);
