@@ -3,8 +3,8 @@ const figlet = require('figlet');
 module.exports = {
     name: "textart",
     aliases: ["ascii"],
-    category: "info",
-    description: "ping and stuff",
+    category: "fun",
+    description: "Text art using ascii",
     usage: "[command | alias]",
     run: async (bot, message, args) => {
         if(!args[0]) return message.channel.send('Please provide some text to create ascii art.');
