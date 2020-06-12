@@ -5,7 +5,7 @@ module.exports={
     description: "Set the slowmode in a channel",
     usage: "[command | alias]",
     run: async (bot, message, args) => {
-        const logchannel = message.guild.channels.cache.find(c => c.name === "logs") || message.channel;
+        const logchannel = message.guild.channels.cache.find(c => c.name === bot.logchans) || message.channel;
         const Discord = require('discord.js')
 
         if (!message.member.hasPermission("MANAGE_MESSAGES")) { 

@@ -8,7 +8,7 @@ module.exports = {
     run: async (bot, message, args) => {
         if (message.deletable) message.delete();
         const toWarn = message.guild.member(message.mentions.users.first()) || message.guild.members.cache.get(args[0]);
-        const logchannel = message.guild.channels.cache.find(c => c.name === "logs") || message.channel;
+        const logchannel = message.guild.channels.cache.find(c => c.name === bot.logchans) || message.channel;
 
         if (!message.member.hasPermission("MANAGE_MESSAGES")) {
             return message.reply("❌ **You dont have permission to warn people**")

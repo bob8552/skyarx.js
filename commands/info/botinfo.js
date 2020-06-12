@@ -9,10 +9,10 @@ module.exports = {
         const exampleEmbed = new Discord.MessageEmbed()
         .setColor('RANDOM')
         .setTitle('Information')
-        .setDescription('A bot made by skyarxbuilder (bob8552) for few servers.')
+        .setDescription('A bot for discord')
         .addFields(
             { name: 'Help & Extra Info', value: 'https://discord.gg/tcxbt5p' },
-            { name: 'Version', value: '1.3.0' }
+            { name: 'Version', value: bot.version }
         )
         .setTimestamp()
         .setFooter(`${message.author.username}`);

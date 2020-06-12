@@ -8,7 +8,7 @@ module.exports = {
   run: async (bot, message, args) => {
     const embedcmds = new Discord.MessageEmbed()
       .setColor("RANDOM")
-      .setTitle("**Commands V1.3.0**")
+      .setTitle(`**Commands ${bot.version}**`)
       .addFields(
         {
           name: "**Info commands**",
@@ -32,12 +32,12 @@ module.exports = {
         
         {
           name: "**Owner only commands**",
-          value: "**`>leave, >say`**"
+          value: "**`>leave, >say, >shutdown, >eval`**"
         },
 
         {
-          name: "**1.3.0 Changelog**",
-          value: "**`Removed >test and added >textart (>ascii) comand`**"
+          name: `**Changelog ${bot.version}**`,
+          value: "**`Cleaned up stuff ( ͡° ͜ʖ ͡°)`**"
         }
       )
       .setTimestamp()

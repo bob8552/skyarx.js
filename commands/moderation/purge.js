@@ -6,7 +6,7 @@ module.exports = {
     description: "Deletes the amount of messages specified",
     usage: "[command | alias]",
     run: async (bot, message, args) => {
-        const logChannel = message.guild.channels.cache.find(c => c.name === "logs") || message.channel;
+        const logChannel = message.guild.channels.cache.find(c => c.name === bot.logchans) || message.channel;
         const amount = args.join(' ');
 
         if (message.deletable) message.delete();
