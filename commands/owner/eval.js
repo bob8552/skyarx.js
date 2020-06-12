@@ -8,9 +8,9 @@ module.exports = {
     run: async (bot, message, args) => {
         if (message.deletable) message.delete();
 
-        const logss = message.guild.channels.cache.find(c => c.name === "logs") || message.channel;
+        const logss = message.guild.channels.cache.find(c => c.name === bot.logchans) || message.channel;
 
-        if (message.author.id !== "685767907082633244") {
+        if (!bot.owner.includes(message.author.id)) {
             return message.channel.send("You cannot run this command!");
         }
 

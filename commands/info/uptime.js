@@ -6,7 +6,6 @@ module.exports = {
   description: "Gives bot uptime.",
   usage: "[command | alias]",
   run: async (bot, message, args) => {
-    
     let totalSeconds = bot.uptime / 1000;
     let days = Math.floor(totalSeconds / 86400);
     let hours = Math.floor(totalSeconds / 3600);

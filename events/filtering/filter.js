@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
-const blocked = require("./blockedWords.json");
+const blocked = require("./blocked.json");
 
 module.exports = async (bot, message) => {
   try {
     if (message.author.bot) return;
     var logchannel =
-      message.guild.channels.cache.find(c => c.name === "logs") ||
+      message.guild.channels.cache.find(c => c.name === bot.logchans) ||
       bot.channels.cache.get("711376099707453480");
     if (!logchannel) return;
 

@@ -9,11 +9,7 @@ module.exports = {
         const embedhelp = new Discord.MessageEmbed()
             .setColor('RANDOM')
             .setTitle('Help')
-            .setDescription('**Use >botinfo for bot information or >cmds for commands.**')
-            .addFields(
-            { name: '**Required roles**', value: '**`"Muted", "Verified"`**' },
-            { name: '**Required channels**', value: '**`"logs", "verify", "polls"`**' }
-            )
+            .setDescription('Use >botinfo for bot information or >cmds for commands')
             .setTimestamp()
             .setFooter(`${message.author.username}`);
 

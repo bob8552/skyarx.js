@@ -8,7 +8,7 @@ module.exports = {
     run: async (bot, message, args) => {
         if (message.deletable) message.delete();
 
-        const logs3 = message.guild.channels.cache.find(c => c.name === "logs") || message.channel;
+        const logs3 = message.guild.channels.cache.find(c => c.name === bot.logchans) || message.channel;
 
         if (!args[0]) {
             return message.reply("❌ **Please provide a person to kick !**")

@@ -7,7 +7,7 @@ module.exports = {
   usage: "[command | alias]",
   run: async (bot, message, args) => {
     
-  if (message.author.id !== "685767907082633244") {
+  if (!bot.owner.includes(message.author.id)) {
       return message.reply("Only the owner can run this command !")
   }
     

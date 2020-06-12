@@ -7,7 +7,7 @@ module.exports = {
     usage: "[command | alias]",
     run: async (bot, message, args) => {
         if (message.deletable) message.delete();
-        const logchannel = message.guild.channels.cache.find(c => c.name === "logs") || message.channel;
+        const logchannel = message.guild.channels.cache.find(c => c.name === bot.logchans) || message.channel;
         if (message.channel.name !== "verify") return message.reply("❌ **You can only run this command in a verification channel !**");
         const role = message.channel.guild.roles.cache.find(role => role.name === "Member") || message.channel.guild.roles.cache.find(role => role.name === "Verified");
         if (!role) return message.reply("❌ **Couldn't find a 'Member' or 'Verified' role.**");

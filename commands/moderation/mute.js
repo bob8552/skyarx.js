@@ -9,11 +9,11 @@ module.exports = {
     run: async (bot, message, args) => {
         if (message.deletable) message.delete();
         const toWarn = message.guild.member(message.mentions.users.first()) || message.guild.members.cache.get(args[0]);
-        const logchannel = message.guild.channels.cache.find(c => c.name === "logs") || message.channel;
+        const logchannel = message.guild.channels.cache.find(c => c.name === bot.logchans) || message.channel;
         const role = message.channel.guild.roles.cache.find(role => role.name === "Muted");
 
         if (!message.member.hasPermission("MANAGE_MESSAGES")) { 
-          return message.reply("❌ **You do not have permission to mute users !**")
+          return message.reply("You do not have permission to mute users.")
         }
     
     
@@ -27,7 +27,7 @@ module.exports = {
             return message.reply("❌ **You need to provide a reason to mute someone !**")
         }
 
-        if (toWarn.roles.cache.some(r => r.name === role.name)) return message.reply("**This user is already muted.**");
+        if (toWarn.roles.cache.some(r => r.name === role.name)) return message.reply("This user is already muted.");
     
         toWarn.roles.add(role)
         .catch(err => {
