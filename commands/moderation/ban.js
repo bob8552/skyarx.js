@@ -1,11 +1,16 @@
 const Discord = require("discord.js");
 module.exports = {
     name: "ban",
-    aliases: ["b"],
+    aliases: ["permexile"],
     category: "moderation",
     description: "Ban a certain user",
     usage: "[command | alias]",
     run: async (bot, message, args) => {
+      
+      //Patch for the ">b a n" bug.
+      
+      try{
+      
         if (message.deletable) message.delete();
 
         const logs3 = message.guild.channels.cache.find(c => c.name === bot.logchans) || message.channel;
@@ -27,7 +32,7 @@ module.exports = {
             return message.reply("❌ **I cannot ban members !**");
         }
 
-        const toBan = message.mentions.members.first() || message.guild.members.get(args[0]);
+        const toBan = message.mentions.members.first() || message.guild.members.cache.get(args[0])
 
         if (!toBan) {
             return message.reply("❌ **I couldn't find that member !**");
@@ -65,6 +70,10 @@ module.exports = {
                 .setDescription(`❌ **An error has occured:** \`${err}\``)
             if (err) return message.channel.send(errbed)
         });
+        
+      } catch (e) {
+        message.reply(`Something went wrong, DM \`Bob8552#0471\` or use >bugreport to report the bug.`)
+      }
 
 
     }
