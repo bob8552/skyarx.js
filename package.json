@@ -7,16 +7,12 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "@discordjs/opus": "^0.3.2",
     "ascii-table": "0.0.9",
     "discord.js": "^12.2.0",
     "express": "^4.17.1",
-    "imageapi.js": "^1.0.3",
     "ms": "^2.1.2",
     "node-fetch": "^2.6.0",
     "pm2": "^4.4.0",
-    "yt-search": "^1.1.2",
-    "ytdl-core": "^3.1.1",
     "figlet": "^1.4.0"
   },
   "engines": {
