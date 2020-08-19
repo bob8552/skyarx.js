@@ -37,7 +37,7 @@ module.exports = {
                 .setDescription(`❌ **An error has occured, have you made a role named "Muted" ? Do they have higher permissions ?**`)
             if (err) return message.channel.send(errbed)
         });
-    
+  
         const embedyeet = new Discord.MessageEmbed()
             .setColor('GREEN')
             .setTitle('User muted !')

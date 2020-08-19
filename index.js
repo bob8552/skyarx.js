@@ -11,7 +11,7 @@ const token = process.env.TOKEN;
 
 bot.prefix = prefix;
 bot.owner = ["571757070735638556", "683667593772400711"];
-bot.logchans = "logs" || "bot-logs";
+bot.logchans = "logs";
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 bot.categories = fs.readdirSync("./commands/");
