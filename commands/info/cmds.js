@@ -32,12 +32,12 @@ module.exports = {
         
         {
           name: "**Owner only commands**",
-          value: "**`>leave, >say, >shutdown, >eval`**"
+          value: "**`>say, >shutdown, >eval`**"
         },
 
         {
           name: `**Changelog ${bot.version}**`,
-          value: "**`Cleaned up stuff ( ͡° ͜ʖ ͡°)`**"
+          value: "**`Rebranded the bot.`**"
         }
       )
       .setTimestamp()

@@ -72,7 +72,7 @@ module.exports = {
         });
         
       } catch (e) {
-        message.reply(`Something went wrong, DM \`Bob8552#0471\` or use >bugreport to report the bug.`)
+        message.reply(`Something went wrong.`)
       }
 
 

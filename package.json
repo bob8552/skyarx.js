@@ -1,5 +1,5 @@
 {
-  "name": "skyarx.js",
+  "name": "neobot",
   "version": "1.0.0",
   "description": "A bot",
   "main": "index.js",
@@ -19,7 +19,7 @@
     "node": "12.x"
   },
   "repository": {
-    "url": "https://github.com/skyarxbuilder/skyarx.jsbot"
+    "url": "https://github.com/bob8552/NeoBot"
   },
   "license": "ISC",
   "keywords": [

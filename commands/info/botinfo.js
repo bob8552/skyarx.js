@@ -11,7 +11,6 @@ module.exports = {
         .setTitle('Information')
         .setDescription('A bot for discord')
         .addFields(
-            { name: 'Help & Extra Info', value: 'https://discord.gg/tcxbt5p' },
             { name: 'Version', value: bot.version }
         )
         .setTimestamp()

@@ -60,7 +60,7 @@ module.exports = {
                 { name: 'Channel', value: `\`${message.channel.name}\`` },
               )
         setTimeout(function () {
-        toBan.ban(args.slice(1).join(" "))
+        	toBan.ban(args.slice(1).join(" "))
         }, 5000);
         return logs3.send(embedddette).then(message.channel.send(`:white_check_mark:  ${toBan} **has successfully been banned ! Check** ${logs3} **for more information !**`).then(toBan.send(`**You have been banned from** \`${message.guild.name}\` **by** \`${message.author.tag}\` **due to** \`${args.slice(1).join(" ")}\` **!**`)))
         .catch(err => {
@@ -72,7 +72,7 @@ module.exports = {
         });
         
       } catch (e) {
-        message.reply(`Something went wrong, DM \`Bob8552#0471\` or use >bugreport to report the bug.`)
+        message.reply(`Something went wrong.`)
       }
 
 
